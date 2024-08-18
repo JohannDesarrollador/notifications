@@ -25,6 +25,8 @@ Jetstream is designed using [Tailwind CSS](https://tailwindcss.com) and offers y
 
 Documentation for Jetstream can be found on the [Jetstream website](https://jetstream.laravel.com).
 
+php artisan johann-notifications:install inertia
+
 ## Contributing
 
 Thank you for considering contributing to Jetstream! You can read the contribution guide [here](.github/CONTRIBUTING.md).

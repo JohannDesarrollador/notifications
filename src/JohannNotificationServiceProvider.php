@@ -21,9 +21,9 @@ class JohannNotificationServiceProvider extends ServiceProvider
     public function boot()
     {
 
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'jetstream');
+        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'jetstream');
 
-        // $this->configurePublishing();
+        $this->configurePublishing();
         $this->configureRoutes();
         $this->configureCommands();
 
@@ -54,13 +54,13 @@ class JohannNotificationServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../stubs/config/johann_notifications.php' => config_path('johann_notifications.php'),
-        ], 'notifications-config');
+        ], 'johann-notifications-config');
 
 
         $this->publishes([
             __DIR__.'/../database/migrations/2024_08_04_010224_create_notificaciones_globales_table.php' => database_path('migrations/2024_08_04_010224_create_notificaciones_globales_table.php'),
             __DIR__.'/../database/migrations/2024_08_04_010254_create_notificaciones_usuarios_table.php' => database_path('migrations/2024_08_04_010254_create_notificaciones_usuarios_table.php'),
-        ], 'notifications-migrations');
+        ], 'johann-notifications-migrations');
 
         $this->publishes([
             __DIR__.'/../routes/'.config('jetstream.stack').'.php' => base_path('routes/jetstream.php'),

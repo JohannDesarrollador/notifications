@@ -39,8 +39,8 @@ class InstallCommand extends Command
   {
 
     // Publish...
-    $this->callSilent('vendor:publish', ['--tag' => 'notifications-config', '--force' => true]);
-    $this->callSilent('vendor:publish', ['--tag' => 'notifications-migrations', '--force' => true]);
+    $this->callSilent('vendor:publish', ['--tag' => 'johann-notifications-config', '--force' => true]);
+    $this->callSilent('vendor:publish', ['--tag' => 'johann-notifications-migrations', '--force' => true]);
 
     // Install Stack...
     if ($this->argument('stack') === 'livewire')

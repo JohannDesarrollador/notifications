@@ -2,7 +2,7 @@
 
 namespace JohannDesarrollador\Notifications\Utils;
 
-use JohannDesarrollador\Notifications\Notificacion;
+use JohannDesarrollador\Notifications\Models\Notificacion;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
